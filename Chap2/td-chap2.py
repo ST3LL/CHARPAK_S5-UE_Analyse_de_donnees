@@ -42,7 +42,6 @@ np.random.random(10)
 
 #%%
 import numpy as np
-del plt
 import matplotlib.pyplot as plt
 
 x = np.random.random(10)
