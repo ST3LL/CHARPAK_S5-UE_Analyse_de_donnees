@@ -31,7 +31,7 @@ def calculate_median(l):
     if l_len % 2 == 0 :
         return ( l[int((l_len-1)/2)] + l[int((l_len+1)/2)]) / 2 
     else:
-        return l[int((l_len-1)/2)]
+        return l[int((l_len+1)/2)]
 
 
 v = [1, 2, 3,4]
