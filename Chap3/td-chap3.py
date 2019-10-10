@@ -19,6 +19,13 @@ def numpy_moyenne(l):
     
 
 
+    
+def nympy_ecarttype(x):
+    return np.std(x)
+
+
+
+
 def produit_scalaire(u,v):
     return sum([x * y for x, y in zip(u, v)])
 
