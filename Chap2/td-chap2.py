@@ -74,7 +74,6 @@ plt.show()
 
 import numpy as np
 from random import random
-del plt
 import matplotlib.pyplot as plt
 
 plt.hist(np.random.normal(size=10000), bins=50, density=True)
@@ -94,7 +93,6 @@ plt.show()
 #%%
 import numpy as np
 from random import random
-del plt
 import matplotlib.pyplot as plt
 
 
