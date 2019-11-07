@@ -57,3 +57,17 @@ si pas distribution gaussienne :
 """
 logx = np.log(x)
 logy = np.log(y)
+
+regr = linear_model.LinearRegression()
+regr.fit(logx, logy)
+regr.coef_, regr.intercept_
+regr.score(logx, logy)
+
+r2_score(logx, logy)
+
+plt.scatter(logx, logy)
+plt.plot(logx, regr.predict(logx))
+plt.show()
+
+residus = logy - regr.predict(logx)
+plt.hist(residus, bins=100)
