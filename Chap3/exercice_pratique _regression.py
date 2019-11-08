@@ -1,8 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov  7 08:20:36 2019
+
+@author: Estelle
+"""
+
 import numpy as np
-import matplotlib.pylot as plt
-%matplolib inline
+import matplotlib.pyplot as plt
 
 
+#%%
 #ouvrir un fichier .txt et ignorer les 33 premieres lignes
 data = np.loadtxt("x01.txt", skiprows=33) #genere un array
 
@@ -18,11 +25,12 @@ data.shape
 x = data[:,1]
 y = data[:,2]
 
-plt.scatter(x,y)
-plt.hist(x, bins=100)
-plt.show()
+#plt.scatter(x,y)
+#plt.hist(x, bins=100)
+#plt.show()
 
 
+#%%
 from sklearn import linear_model
 x = x.reshape(-1,1)
 y = y.reshape(-1,1)
@@ -37,18 +45,23 @@ regr.coef_, regr.intercept_
 regr.score(x,y)
 
 
-
+#%%
 from sklearn.metrics import r2_score
 #coefficient R²
 r2_score(x,y)
 
-plt.scatter(x,y)
-plt.plot(x, regr.predict(x))
-plt.show()
+#plt.scatter(x,y)
+#plt.plot(x, regr.predict(x))
+#plt.show()
 
 #calculer residus et representer la distribution (gaussienne ou non ?)
 residus = y - regr.predict(x)
+#plt.hist(residus, bins=100)
+#plt.show()
 
+
+
+#%%
 """
 si pas distribution gaussienne : 
 - on retire les extremes
@@ -65,9 +78,12 @@ regr.score(logx, logy)
 
 r2_score(logx, logy)
 
-plt.scatter(logx, logy)
-plt.plot(logx, regr.predict(logx))
-plt.show()
+#plt.scatter(logx, logy)
+#plt.plot(logx, regr.predict(logx))
+#plt.show()
 
 residus = logy - regr.predict(logx)
 plt.hist(residus, bins=100)
+plt.show()
+
+
