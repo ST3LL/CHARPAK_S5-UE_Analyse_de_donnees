@@ -56,8 +56,8 @@ r2_score(x,y)
 
 #calculer residus et representer la distribution (gaussienne ou non ?)
 residus = y - regr.predict(x)
-#plt.hist(residus, bins=100)
-#plt.show()
+plt.hist(residus, bins=100)
+plt.show()
 
 
 
@@ -83,7 +83,7 @@ r2_score(logx, logy)
 #plt.show()
 
 residus = logy - regr.predict(logx)
-plt.hist(residus, bins=100)
-plt.show()
+#plt.hist(residus, bins=100)
+#plt.show()
 
 
